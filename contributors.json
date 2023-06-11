@@ -1,0 +1,307 @@
+{
+    "rgantzos":{
+      "type":["code","content","ideas","docs","bugs","review","community"],
+      "link":"https://github.com/rgantzos",
+      "picture": "https://github.com/rgantzos.png"
+    },
+    "scratchfangs":{
+      "type":["code","ideas","bugs","review","community"],
+      "link":"https://github.com/scratchfangs",
+      "picture": "https://github.com/scratchfangs.png"
+    },
+    "daniel4-scratch":{
+      "type":["code","content", "design", "ideas","bugs","review","community"],
+      "link":"https://github.com/daniel4-scratch",
+      "picture": "https://github.com/daniel4-scratch.png"
+    },
+    "mistysloth":{
+      "type":["code","ideas","bugs","community","review","docs","content"],
+      "link":"https://github.com/mistysloth",
+      "picture": "https://github.com/mistysloth.png"
+    },
+    "MaterArc":{
+      "type":["community","content", "design","review", "code"],
+      "link":"https://github.com/MaterArc",
+      "picture": "https://github.com/materarc.png"
+    },
+    "lasted10":{
+      "type":["ideas","bugs","code","community"],
+      "link":"https://github.com/lasted10",
+      "picture": "https://github.com/lasted10.png"
+    },
+    "GarboMuffin":{
+      "type":["bugs","security","code","review"],
+      "link":"https://github.com/garbomuffin",
+      "picture": "https://github.com/garbomuffin.png"
+    },
+    "petabyt":{
+      "type":["code","ideas"],
+      "link":"https://github.com/petabyt",
+      "picture": "https://github.com/petabyt.png"
+    },
+    "veloce-vasta":{
+      "type":["code","ideas","review"],
+      "link":"https://github.com/veloce-vasta",
+      "picture": "https://github.com/veloce-vasta.png"
+    },
+    "Dr-Lego":{
+      "type":["code"],
+      "link":"https://github.com/Dr-Lego",
+      "picture": "https://github.com/dr-lego.png"
+    },
+    "Electro-Corp":{
+      "type":["code","community"],
+      "link":"https://github.com/electro-corp",
+      "picture": "https://github.com/electro-corp.png"
+    },
+    "TimMcCool":{
+      "type":["code"],
+      "link":"https://github.com/TimMcCool",
+      "picture": "https://github.com/timmccool.png"
+    },
+    "aidinjk":{
+      "type":["code"],
+      "link":"https://github.com/aidinjk",
+      "picture": "https://github.com/aidinjk.png"
+    },
+    "devxan":{
+      "type":["ideas","community", "code"],
+      "link":"https://github.com/devxan",
+      "picture": "https://github.com/devxan.png"
+    },
+    "infinitytec":{
+      "type":["code"],
+      "link":"https://github.com/infinitytec",
+      "picture": "https://github.com/infinitytec.png"
+    },
+    "towerofnix":{
+      "type":["code"],
+      "link":"https://github.com/towerofnix",
+      "picture": "https://github.com/towerofnix.png"
+    },
+    "Tacodude7729":{
+      "type":["code"],
+      "link":"https://github.com/Tacodude7729",
+      "picture": "https://github.com/tacodude7729.png"
+    },
+    "Sly-Little-Fox":{
+      "type":["ideas","localization","community","review"],
+      "link":"https://github.com/Sly-Little-Fox",
+      "picture": "https://github.com/sly-little-fox.png"
+    },
+    "michaeIwave":{
+      "type":["ideas","bugs"],
+      "link":"https://github.com/michaeIwave",
+      "picture": "https://github.com/michaeIwave.png"
+    },
+    "ksdavidc":{
+      "type":["ideas","bugs"],
+      "link":"https://github.com/ksdavidc",
+      "picture": "https://github.com/ksdavidc.png"
+    },
+    "PortilizenHub":{
+      "type":["ideas","bugs","community"],
+      "link":"https://github.com/portilizenhub",
+      "picture": "https://github.com/portilizenhub.png"
+    },
+    "-KittyStudios-":{
+      "type":["ideas", "bugs"],
+      "link":"https://scratch.mit.edu/users/-KittyStudios-",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/67945791_90x90.png?v="
+    },
+    "jcubic":{
+      "type":["ideas", "bugs"],
+      "link":"https://github.com/jcubic",
+      "picture": "https://github.com/jcubic.png"
+    },
+    "Karve42":{
+      "type":["ideas","community"],
+      "link":"https://github.com/karve42",
+      "picture": "https://github.com/karve42.png"
+    },
+    "Outrocodes":{
+      "type":["ideas","community"],
+      "link":"https://github.com/outrocodes",
+      "picture": "https://github.com/outrocodes.png"
+    },
+    "Evrick_14":{
+      "type":["content","community"],
+      "link":"https://scratch.mit.edu/users/Evrick_14/",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/64564100_90x90.png?v="
+    },
+    "ThePro255":{
+      "type":["ideas","bugs","community"],
+      "link":"https://scratch.mit.edu/users/ThePro255/",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/81183717_90x90.png?v="
+    },
+    "Giolaboman":{
+      "type":["ideas","community"],
+      "link":"https://scratch.mit.edu/users/Giolaboman/",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/33493765_90x90.png?v="
+    },
+    "7pace":{
+      "type":["ideas"],
+      "link":"https://scratch.mit.edu/users/7pace/",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/80102553_90x90.png?v="
+    },
+    "Jazza-231":{
+      "type":["ideas","community"],
+      "link":"https://github.com/jazza-231",
+      "picture": "https://github.com/jazza-231.png"
+    },
+    "Mario_best_games":{
+      "type":["ideas"],
+      "link":"https://scratch.mit.edu/users/Mario_best_games/",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/70700665_90x90.png?v="
+    },
+    "KugelPfusch":{
+      "type":["content"],
+      "link":"https://github.com/KugelPfusch",
+      "picture": "https://github.com/kugelpfusch.png"
+    },
+    "arncv":{
+      "type":["content"],
+      "link":"https://github.com/arncv",
+      "picture": "https://github.com/arncv.png"
+    },
+    "AnderMendoza":{
+      "type":["content"],
+      "link":"https://github.com/AnderMendoza",
+      "picture": "https://github.com/andermendoza.png"
+    },
+    "poxeNe":{
+      "type":["content"],
+      "link":"https://github.com/poxeNe",
+      "picture": "https://github.com/poxene.png"
+    },
+    "philipp2007":{
+      "type":["ideas"],
+      "link":"https://scratch.mit.edu/users/philipp2007/",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/34316478_90x90.png?v="
+    },
+    "Vladutzu27":{
+      "type":["ideas"],
+      "link":"https://github.com/Vladutzu27",
+      "picture": "https://github.com/Vladutzu27.png"
+    },
+    "MixelFanUTTP":{
+      "type":["ideas"],
+      "link":"https://scratch.mit.edu/users/MixelFanUTTP/",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/25080383_90x90.png?v="
+    },
+    "Poly2it":{
+      "type":["ideas"],
+      "link":"https://github.com/poly2it",
+      "picture": "https://github.com/poly2it.png"
+    },
+    "Romadillo":{
+      "type":["ideas"],
+      "link":"https://github.com/romadillo",
+      "picture": "https://github.com/romadillo.png"
+    },
+    "GrahamBurger":{
+      "type":["ideas"],
+      "link":"https://scratch.mit.edu/users/GrahamBurger",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/61922407_90x90.png?v="
+    },
+    "philipp2007":{
+      "type":["ideas"],
+      "link":"https://scratch.mit.edu/users/philipp2007",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/34316478_90x90.png?v="
+    },
+    "jeffalo":{
+      "type":["bugs"],
+      "link":"https://github.com/jeffalo",
+      "picture": "https://github.com/jeffalo.png"
+    },
+    "maDU59":{
+      "type":["ideas"],
+      "link":"https://github.com/maDU59",
+      "picture": "https://github.com/madu59.png"
+    },
+    "yippymishy":{
+      "type":["bugs"],
+      "link":"https://scratch.mit.edu/users/yippymishy/",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/17815697_90x90.png?v="
+    },
+    "callumjt":{
+      "type":["community"],
+      "link":"https://github.com/callumjt",
+      "picture": "https://github.com/callumjt.png"
+    },
+    "XShrunk":{
+      "type":["bugs","community"],
+      "link":"https://github.com/xshrunk",
+      "picture": "https://github.com/xshrunk.png"
+    },
+    "DNin01":{
+      "type":["bugs"],
+      "link":"https://github.com/dnin01",
+      "picture": "https://github.com/dnin01.png"
+    },
+    "ManavMalhotra":{
+      "type":["bugs"],
+      "link":"https://github.com/ManavMalhotra",
+      "picture": "https://github.com/manavmalhotra.png"
+    },
+    "BabyElias":{
+      "type":["bugs"],
+      "link":"https://github.com/BabyElias",
+      "picture": "https://github.com/babyelias.png"
+    },
+    "dinomaster20":{
+      "type":["bugs"],
+      "link":"https://github.com/dinomaster20",
+      "picture": "https://github.com/dinomaster20.png"
+    },
+    "ahmetlii":{
+      "type":["localization"],
+      "link":"https://github.com/ahmetlii",
+      "picture": "https://github.com/ahmetlii.png"
+    },
+    "PoppyAsafloppy":{
+      "type":["community"],
+      "link":"https://scratch.mit.edu/users/PoppyAsafloppy/",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/82526734_90x90.png?v="
+    },
+    "goodherer":{
+      "type":["community"],
+      "link":"https://scratch.mit.edu/users/goodherer/",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/61840070_90x90.png?v="
+    },
+    "JefferyTheSuperKat":{
+      "type":["community"],
+      "link":"https://scratch.mit.edu/users/JefferyTheSuperKat",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/49369496_90x90.png?v="
+    },
+    "1080GBA":{
+      "type":["community"],
+      "link":"https://github.com/1080GBA",
+      "picture": "https://github.com/1080gba.png"
+    },
+    "retronbv":{
+      "type":["community"],
+      "link":"https://github.com/retronbv",
+      "picture": "https://github.com/retronbv.png"
+    },
+    "JoePotatoScratch":{
+      "type":["community"],
+      "link":"https://scratch.mit.edu/users/JoePotatoScratch",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/62086269_90x90.png?v="
+    },
+    "Freezing-Fox":{
+      "type":["community"],
+      "link":"https://scratch.mit.edu/users/Freezing-Fox/",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/82446891_90x90.png?v="
+    },
+    "AlexStudiosInc":{
+      "type":["community"],
+      "link":"https://scratch.mit.edu/users/AlexStudiosInc/",
+      "picture": "https://cdn2.scratch.mit.edu/get_image/user/39343793_90x90.png?v="
+    },
+    "CST1229":{
+      "type":["answering"],
+      "link":"https://github.com/CST1229",
+      "picture": "https://github.com/cst1229.png"
+    }
+  }

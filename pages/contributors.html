@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Credits | ScratchTools</title>
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/images/logo.svg" />
+  </head>
+  <body>
+    <div class="nav">
+      <a href="/" class="title">
+        <img class="logo" src="/images/logo.svg" />
+        <span class="titlespan">ScratchTools</span>
+      </a>
+      <div class="right">
+        <a href="https://docs.scratchtools.app">Docs</a>
+        <a href="https://github.com/STForScratch/ScratchTools">Contribute</a>
+        <a class="download-btn">
+          <button>Get ScratchTools</button>
+        </a>
+      </div>
+    </div>
+    <div class="title-stuff">
+      <h1 class="title">Credits</h1>
+      <p>Here's everyone who has helped by contributing to ScratchTools.</p>
+    </div>
+    <div class="credits"></div>
+    <script>
+      var credits = JSON.parse(atob("<%= credits %>"));
+      Object.keys(credits).forEach(function (el) {
+        var credit = credits[el];
+        credit.username = el;
+        var div = document.createElement("div");
+        div.className = "credit";
+        var color = document.createElement("div");
+        color.className = "beta-colorful-design";
+        div.appendChild(color);
+        var h3 = document.createElement("h3");
+        h3.textContent = credit.username;
+        var a = document.createElement("a");
+        a.href = credit.link;
+        a.textContent = credit.link.startsWith("https://github.com/")
+          ? "GitHub Profile"
+          : "Scratch Profile";
+        div.appendChild(h3);
+        div.appendChild(a);
+        if (credit.link.startsWith("https://github.com/")) {
+          var img = document.createElement("img");
+          img.src = credit.link + ".png";
+          div.appendChild(img);
+          img.onerror = this.remove
+        }
+        document.querySelector(".credits").appendChild(div);
+      });
+    </script>
+    <footer>
+      <div class="about">
+        <img class="footer-logo" src="/images/logo.svg" />
+        <p>The perfect extension for Scratch.</p>
+      </div>
+      <div class="all-links">
+        <section class="links">
+          <b>Socials</b>
+          <a href="https://youtube.com/@ScratchTools">YouTube</a>
+          <a href="https://twitter.com/STForScratch">Twitter</a>
+          <a href="https://data.scratchtools.app">Community Discord</a>
+          <a href="https://discord.gg/kzScDPxE9J">Developer Discord</a>
+        </section>
+        <section class="links">
+          <b>Development</b>
+          <a href="https://github.com/STForScratch/ScratchTools">Repository</a>
+          <a href="https://github.com/STForScratch">Organization</a>
+          <a href="https://docs.scratchtools.app/docs/contributing/how"
+            >Documentation</a
+          >
+          <a href="https://explore.transifex.com/scratchtools/scratchtools/"
+            >Localization</a
+          >
+        </section>
+        <section class="links">
+          <b>Resources</b>
+          <a href="/feedback/">Feedback</a>
+          <a href="https://docs.scratchtools.app/docs/privacy-policy"
+            >Privacy Policy</a
+          >
+          <a href="https://docs.scratchtools.app/blog">Blog</a>
+          <a href="https://github.com/STForScratch/ScratchTools/discussions"
+            >Discussions</a
+          >
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feedback | ScratchTools</title>
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/images/logo.svg" />
+  </head>
+  <body>
+    <div class="nav">
+      <a href="/" class="title">
+        <img class="logo" src="/images/logo.svg" />
+        <span class="titlespan">ScratchTools</span>
+      </a>
+      <div class="right">
+        <a href="https://docs.scratchtools.app">Docs</a>
+        <a href="https://github.com/STForScratch/ScratchTools">Contribute</a>
+        <a class="download-btn">
+          <button>Get ScratchTools</button>
+        </a>
+      </div>
+    </div>
+    <div class="title-stuff">
+      <h1 class="title">Feedback</h1>
+      <p>Have feedback for ScratchTools? Fill out the form below so that we can improve!</p>
+    </div>
+    <h2>Fill out the form below to leave feedback</h2>
+    <div class="form">
+        <input class="ste-username-input" type="text" placeholder="Username">
+        <br>
+        <textarea class="ste-feedback-input" placeholder="Feedback goes here..."></textarea>
+        <br>
+        <button class="ste-submit">Submit Feedback</button>
+    </div>
+    <div class="success" style="display: none;">
+        Thanks for the feedback! Our developers have received it.
+    </div>
+    <script>
+      async function submit() {
+        if (
+          document.querySelector(".ste-username-input").value &&
+          document.querySelector(".ste-feedback-input").value
+        ) {
+          document.querySelector(".ste-submit").style.display = "none";
+          const send = await (
+            await fetch("https://data.scratchtools.app/web-feedback/", {
+              method: "POST",
+              headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                username: document.querySelector(".ste-username-input").value,
+                feedback: document.querySelector(".ste-feedback-input").value,
+                useragent: navigator.userAgent,
+              }),
+            })
+          ).json();
+          document.querySelector(".form").style.display = "none"
+          document.querySelector(".success").style.display = null
+          document.querySelector(".ste-submit").style.display = null;
+        } else {
+          alert(
+            "Please make sure that you've entered valid feedback and a username."
+          );
+        }
+      }
+
+      document.querySelector(".ste-submit").addEventListener("click", submit);
+    </script>
+    <footer>
+      <div class="about">
+        <img class="footer-logo" src="/images/logo.svg" />
+        <p>The perfect extension for Scratch.</p>
+      </div>
+      <div class="all-links">
+        <section class="links">
+          <b>Socials</b>
+          <a href="https://youtube.com/@ScratchTools">YouTube</a>
+          <a href="https://twitter.com/STForScratch">Twitter</a>
+          <a href="https://data.scratchtools.app">Community Discord</a>
+          <a href="https://discord.gg/kzScDPxE9J">Developer Discord</a>
+        </section>
+        <section class="links">
+          <b>Development</b>
+          <a href="https://github.com/STForScratch/ScratchTools">Repository</a>
+          <a href="https://github.com/STForScratch">Organization</a>
+          <a href="https://docs.scratchtools.app/docs/contributing/how"
+            >Documentation</a
+          >
+          <a href="https://explore.transifex.com/scratchtools/scratchtools/"
+            >Localization</a
+          >
+        </section>
+        <section class="links">
+          <b>Resources</b>
+          <a href="/feedback/">Feedback</a>
+          <a href="https://docs.scratchtools.app/docs/privacy-policy"
+            >Privacy Policy</a
+          >
+          <a href="https://docs.scratchtools.app/blog">Blog</a>
+          <a href="https://github.com/STForScratch/ScratchTools/discussions"
+            >Discussions</a
+          >
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
