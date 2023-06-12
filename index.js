@@ -20,39 +20,6 @@ app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html");
 app.set("views", __dirname);
 
-var allFeatures = []
-
-async function getAllFeatures() {
-  var features = [];
-  var data = await (
-    await fetch(
-      "https://raw.githubusercontent.com/STForScratch/ScratchTools/main/features/features.json"
-    )
-  ).json();
-  for (var i in data) {
-    var feature = data[i];
-    if (feature.version === 2) {
-      var newData = await (
-        await fetch(
-          `https://raw.githubusercontent.com/STForScratch/ScratchTools/main/features/${feature.id}/data.json`
-        )
-      ).json();
-      features.push({
-        title: newData.title,
-        description: newData.description,
-      });
-    } else {
-      features.push({
-        title: feature.title,
-        description: feature.description,
-      });
-    }
-  }
-  allFeatures = features
-  console.log("Cached features.")
-}
-getAllFeatures()
-
 async function getUsercount() {
   return (
     await (
@@ -95,7 +62,7 @@ app.get("/feedback/", async function (req, res) {
 
 app.get("/features/", async function (req, res) {
   res.render(path.join(__dirname, "/pages/features.html"), {
-    features: btoa(JSON.stringify(allFeatures)),
+    features: btoa(JSON.stringify(await (await fetch("https://raw.githubusercontent.com/STForScratch/website3/main/data/features.json")).json())),
   });
 });
 
