@@ -41,15 +41,13 @@
         a.href = credit.link;
         a.textContent = credit.link.startsWith("https://github.com/")
           ? "GitHub Profile"
-          : "Scratch Profile";
+          : (credit.link.startsWith("https://scratch.mit.edu/") ? "Scratch Profile": "Website");
         div.appendChild(h3);
         div.appendChild(a);
-        if (credit.link.startsWith("https://github.com/")) {
           var img = document.createElement("img");
           img.src = credit.link + ".png";
           div.appendChild(img);
           img.onerror = this.remove
-        }
         document.querySelector(".credits").appendChild(div);
       });
     </script>
