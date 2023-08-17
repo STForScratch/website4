@@ -66,6 +66,18 @@ app.get("/features/", async function (req, res) {
   });
 });
 
+app.get("/discord/", function(req, res) {
+  res.redirect("https://discord.gg/rwAs5jDrTQ")
+})
+
+app.get("/docs/", function(req, res) {
+  res.redirect("https://docs.scratchtools.app/docs/intro")
+})
+
+app.get("/blog/", function(req, res) {
+  res.redirect("https://docs.scratchtools.app/blog")
+})
+
 app.get("/images/:file", function (req, res) {
   res.sendFile(path.join(__dirname, "/images/" + req.params.file));
 });
