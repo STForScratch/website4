@@ -7,6 +7,14 @@ var bodyParser = require("body-parser");
 var jsonParser = bodyParser.json();
 app = express();
 
+let redirects = {}
+
+async function getRedirects() {
+  redirects = await (await fetch("https://raw.githubusercontent.com/STForScratch/website3/main/data/redirects.json?nocache=" + Date.now().toString())).json()
+  return redirects
+}
+getRedirects()
+
 app.get("/index.js", async function (req, res) {
   res.sendStatus(404);
 });
@@ -81,6 +89,21 @@ app.get("/blog/", function(req, res) {
 app.get("/images/:file", function (req, res) {
   res.sendFile(path.join(__dirname, "/images/" + req.params.file));
 });
+
+app.get("/cache/", async function(req, res) {
+  await getRedirects()
+  res.send({
+    success: true,
+  })
+})
+
+app.get("/:code", function(req, res, next) {
+  if (redirects[req.params.code]) {
+    res.redirect(redirects[req.params.code])
+  } else {
+    next()
+  }
+})
 
 app.use(function(req, res) {
   res.sendFile(path.join(__dirname, "/pages/404.html"));
