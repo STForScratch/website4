@@ -7,13 +7,20 @@ var bodyParser = require("body-parser");
 var jsonParser = bodyParser.json();
 app = express();
 
-let redirects = {}
+let redirects = {};
 
 async function getRedirects() {
-  redirects = await (await fetch("https://raw.githubusercontent.com/STForScratch/website3/main/data/redirects.json?nocache=" + Date.now().toString())).json()
-  return redirects
+  redirects = await (
+    await fetch(
+      "https://raw.githubusercontent.com/STForScratch/website3/main/data/redirects.json#nocache=" +
+        Date.now().toString() +
+        "?nocache=" +
+        Date.now().toString()
+    )
+  ).json();
+  return redirects;
 }
-getRedirects()
+getRedirects();
 
 app.get("/index.js", async function (req, res) {
   res.sendStatus(404);
@@ -54,13 +61,29 @@ app.get("/goodbye/", async function (req, res) {
 
 app.get("/contributors/", async function (req, res) {
   res.render(path.join(__dirname, "/pages/contributors.html"), {
-    credits: btoa(JSON.stringify(await (await fetch("https://raw.githubusercontent.com/STForScratch/website3/main/data/contributors.json")).json()))
+    credits: btoa(
+      JSON.stringify(
+        await (
+          await fetch(
+            "https://raw.githubusercontent.com/STForScratch/website3/main/data/contributors.json"
+          )
+        ).json()
+      )
+    ),
   });
 });
 
 app.get("/credits/", async function (req, res) {
   res.render(path.join(__dirname, "/pages/contributors.html"), {
-    credits: btoa(JSON.stringify(await (await fetch("https://raw.githubusercontent.com/STForScratch/website3/main/data/contributors.json")).json()))
+    credits: btoa(
+      JSON.stringify(
+        await (
+          await fetch(
+            "https://raw.githubusercontent.com/STForScratch/website3/main/data/contributors.json"
+          )
+        ).json()
+      )
+    ),
   });
 });
 
@@ -70,43 +93,51 @@ app.get("/feedback/", async function (req, res) {
 
 app.get("/features/", async function (req, res) {
   res.render(path.join(__dirname, "/pages/features.html"), {
-    features: btoa(JSON.stringify(await (await fetch("https://raw.githubusercontent.com/STForScratch/website3/main/data/features.json")).json())),
+    features: btoa(
+      JSON.stringify(
+        await (
+          await fetch(
+            "https://raw.githubusercontent.com/STForScratch/website3/main/data/features.json"
+          )
+        ).json()
+      )
+    ),
   });
 });
 
-app.get("/discord/", function(req, res) {
-  res.redirect("https://discord.gg/rwAs5jDrTQ")
-})
+app.get("/discord/", function (req, res) {
+  res.redirect("https://discord.gg/rwAs5jDrTQ");
+});
 
-app.get("/docs/", function(req, res) {
-  res.redirect("https://docs.scratchtools.app/docs/intro")
-})
+app.get("/docs/", function (req, res) {
+  res.redirect("https://docs.scratchtools.app/docs/intro");
+});
 
-app.get("/blog/", function(req, res) {
-  res.redirect("https://docs.scratchtools.app/blog")
-})
+app.get("/blog/", function (req, res) {
+  res.redirect("https://docs.scratchtools.app/blog");
+});
 
 app.get("/images/:file", function (req, res) {
   res.sendFile(path.join(__dirname, "/images/" + req.params.file));
 });
 
-app.get("/cache/", async function(req, res) {
-  await getRedirects()
+app.get("/cache/", async function (req, res) {
+  await getRedirects();
   res.send({
     success: true,
-  })
-})
+  });
+});
 
-app.get("/:code", function(req, res, next) {
+app.get("/:code", function (req, res, next) {
   if (redirects[req.params.code]) {
-    res.redirect(redirects[req.params.code])
+    res.redirect(redirects[req.params.code]);
   } else {
-    next()
+    next();
   }
-})
+});
 
-app.use(function(req, res) {
+app.use(function (req, res) {
   res.sendFile(path.join(__dirname, "/pages/404.html"));
-})
+});
 
 app.listen(PORT);
