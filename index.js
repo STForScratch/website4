@@ -7,6 +7,8 @@ var bodyParser = require("body-parser");
 var jsonParser = bodyParser.json();
 app = express();
 
+const fs = require("fs")
+
 let redirects = {};
 
 async function getRedirects() {
@@ -92,16 +94,11 @@ app.get("/feedback/", async function (req, res) {
 });
 
 app.get("/features/", async function (req, res) {
+  let data = JSON.parse(
+    fs.readFileSync("./features.json", { encoding: "utf8", flag: "r" })
+  );
   res.render(path.join(__dirname, "/pages/features.html"), {
-    features: btoa(
-      JSON.stringify(
-        await (
-          await fetch(
-            "https://raw.githubusercontent.com/STForScratch/website3/main/data/features.json"
-          )
-        ).json()
-      )
-    ),
+    features: btoa(JSON.stringify(data)),
   });
 });
 
