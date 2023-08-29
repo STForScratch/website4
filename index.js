@@ -22,6 +22,7 @@ async function getRedirects() {
   ).json();
   return redirects;
 }
+
 getRedirects();
 
 app.get("/index.js", async function (req, res) {
