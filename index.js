@@ -96,7 +96,7 @@ app.get("/feedback/", async function (req, res) {
 
 app.get("/features/", async function (req, res) {
   let data = JSON.parse(
-    fs.readFileSync("./features.json", { encoding: "utf8", flag: "r" })
+    fs.readFileSync(path.join(__dirname, "/features.json"), { encoding: "utf8", flag: "r" })
   );
   res.render(path.join(__dirname, "/pages/features.html"), {
     features: btoa(JSON.stringify(data)),
