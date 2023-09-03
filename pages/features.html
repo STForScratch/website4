@@ -35,6 +35,8 @@
             var color = document.createElement("div")
             color.className = "colorful-design"
             color.style.background = `url(https://raw.githubusercontent.com/STForScratch/data/main/images/${ftr.id}.png), linear-gradient(45deg, #ff9f00, #ffad42)`
+            color.style.backgroundSize = "cover"
+            color.style.backgroundPosition = "center center"
             div.appendChild(color)
             var h3 = document.createElement("h3")
             h3.textContent = ftr.title
