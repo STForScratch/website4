@@ -58,20 +58,9 @@ app.get("/scratchformat/", async function (req, res) {
   res.sendFile(path.join(__dirname, "/pages/scratchformat.html"));
 });
 
-let recentUninstalls = [];
-
 app.get("/goodbye/", async function (req, res) {
   let ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
   if (req.query.code && req.query.installed && req.query.version) {
-    if (
-      !recentUninstalls.find(
-        (u) => u.ip === ip && u.time > Date.now() - 43200000
-      )
-    ) {
-      recentUninstalls.push({
-        ip,
-        time: Date.now(),
-      });
       let data = await (
         await fetch("https://data.scratchtools.app/uninstall/", {
           method: "POST",
@@ -82,16 +71,16 @@ app.get("/goodbye/", async function (req, res) {
           body: JSON.stringify({
             server: process.env.server,
             timeInstalled: !!new Date(req.query.installed).getTime()
-              ? new Date(req.query.installed)
+              ? new Date(req.query.installed).getTime()
               : null,
             timeUninstalled: Date.now(),
             features: req.query.code || null,
             username: req.query.username || null,
             version: req.query.version || null,
+            ip,
           }),
         })
       ).json();
-    }
   }
   res.sendFile(path.join(__dirname, "/pages/goodbye.html"));
 });
