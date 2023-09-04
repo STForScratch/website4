@@ -72,7 +72,7 @@ app.get("/goodbye/", async function (req, res) {
           body: JSON.stringify({
             server: process.env.server,
             timeInstalled: !!new Date(Number(req.query.installed.toString())).getTime()
-              ? new Date(Number(req.query.installed.toString())).getTime()
+              ? new Date(Number(req.query.installed.toString())).getTime().toString()
               : null,
             timeUninstalled: Date.now(),
             features: req.query.code || null,
