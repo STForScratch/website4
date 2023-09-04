@@ -7,7 +7,7 @@ var bodyParser = require("body-parser");
 var jsonParser = bodyParser.json();
 app = express();
 
-const fs = require("fs")
+const fs = require("fs");
 
 let redirects = {};
 
@@ -58,7 +58,41 @@ app.get("/scratchformat/", async function (req, res) {
   res.sendFile(path.join(__dirname, "/pages/scratchformat.html"));
 });
 
+let recentUninstalls = [];
+
 app.get("/goodbye/", async function (req, res) {
+  let ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
+  if (req.query.code && req.query.installed && req.query.version) {
+    if (
+      !recentUninstalls.find(
+        (u) => u.ip === ip && u.time > Date.now() - 43200000
+      )
+    ) {
+      recentUninstalls.push({
+        ip,
+        time: Date.now(),
+      });
+      let data = await (
+        await fetch("https://data.scratchtools.app/uninstall/", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            server: process.env.server,
+            timeInstalled: !!new Date(req.query.installed).getTime()
+              ? new Date(req.query.installed)
+              : null,
+            timeUninstalled: Date.now(),
+            features: req.query.code || null,
+            username: req.query.username || null,
+            version: req.query.version || null,
+          }),
+        })
+      ).json();
+    }
+  }
   res.sendFile(path.join(__dirname, "/pages/goodbye.html"));
 });
 
@@ -96,7 +130,10 @@ app.get("/feedback/", async function (req, res) {
 
 app.get("/features/", async function (req, res) {
   let data = JSON.parse(
-    fs.readFileSync(path.join(__dirname, "/features.json"), { encoding: "utf8", flag: "r" })
+    fs.readFileSync(path.join(__dirname, "/features.json"), {
+      encoding: "utf8",
+      flag: "r",
+    })
   );
   res.render(path.join(__dirname, "/pages/features.html"), {
     features: btoa(JSON.stringify(data)),
