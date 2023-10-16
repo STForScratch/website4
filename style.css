@@ -265,15 +265,16 @@ div.credit {
   margin: 0.5rem;
   height: 18rem;
   overflow-y: hidden;
+  position: relative;
 }
 
 .credit img {
     width: 2rem;
     height: 2rem;
     border-radius: 1rem;
-    position: relative;
-    top: -6.35rem;
-    left: -6rem;
+    position: absolute;
+    top: 6.5rem;
+    left: 1.5rem;
 }
 
 div.credit {
