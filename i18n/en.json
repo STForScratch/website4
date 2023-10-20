@@ -1,0 +1,93 @@
+{
+  "banner.slogan": {
+    "message": "The perfect extension for Scratch."
+  },
+  "nav.docs": {
+    "message": "Docs"
+  },
+  "nav.contribute": {
+    "message": "Contribute"
+  },
+  "nav.get": {
+    "message": "Get ScratchTools"
+  },
+  "home.body.about": {
+    "message": "About ScratchTools"
+  },
+  "home.body.aboutLong": {
+    "message": "ScratchTools is a community-built Chrome and Firefox extension made for Scratch. It makes Scratching easier, through dozens of edits to the Scratch UI to make Scratch better than ever. Our group of developers, artists, brainstormers, beta testers, and press release managers all come from Scratch."
+  },
+  "home.features.title": {
+    "message": "Features"
+  },
+  "home.features.short": {
+    "message": "Here are some of the features that it includes."
+  },
+  "home.features.more": {
+    "message": "View All 100+ Features"
+  },
+  "home.download.title": {
+    "message": "Download"
+  },
+  "home.download.short": {
+    "message": "Enjoy ScratchTools in your own browser!"
+  },
+  "home.download.users": {
+    "message": "Users"
+  },
+  "home.download.available": {
+    "message": "ScratchTools is available on Chrome, Firefox, and Microsoft Edge!"
+  },
+  "404.main.error": {
+    "message": "We couldn't find the page you were looking for!"
+  },
+  "404.main.weird": {
+    "message": "That's kinda weird..."
+  },
+  "404.main.link": {
+    "message": "If a link sent you here, then the link is no longer working."
+  },
+  "credits.meta.title": {
+    "message": "Credits | ScratchTools"
+  },
+  "credits.main.title": {
+    "message": "Credits"
+  },
+  "credits.main.short": {
+    "message": "Here's everyone who has helped by contributing to ScratchTools."
+  },
+  "features.meta.title": {
+    "message": "Features | ScratchTools"
+  },
+  "features.main.title": {
+    "message": "Features"
+  },
+  "features.main.short": {
+    "message": "ScratchTools includes 100+ unique features, here they are!"
+  },
+  "feedback.meta.title": {
+    "message": "Feedback | ScratchTools"
+  },
+  "feedback.main.title": {
+    "message": "Feedback"
+  },
+  "feedback.main.short": {
+    "message": "Have feedback for ScratchTools? Fill out the form below so that we can improve!"
+  },
+  "feedback.form.label": {
+    "message": "Fill out the form below to leave feedback"
+  },
+  "feedback.form.submit": { "message": "Submit Feedback" },
+  "goodbye.main.title": {
+    "message": "Goodbye"
+  },
+  "goodbye.main.short": {
+    "message": "We'll miss you."
+  },
+  "goodbye.main.long": {
+    "message": "We understand that you have your reasons, and we're sad to see you go. If there's a specific reason why you left, we'd appreciate it if you could give us feedback."
+  },
+  "goodbye.main.feedback": {
+    "message": "Give Feedback"
+  }
+}

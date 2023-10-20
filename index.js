@@ -48,9 +48,46 @@ async function getUsercount() {
   ).count;
 }
 
+let acceptedLanguages = {
+  en: true,
+  ja: true,
+};
+
+function getLanguage(req) {
+  if (!req.handshake) {
+    const value = `; ${req.headers.cookie}`;
+    const parts = value.split(`; ${"lang"}=`);
+    if (parts.length === 2) return parts.pop().split(";").shift();
+  } else {
+    const value = `; ${req.handshake.headers.cookie}`;
+    const parts = value.split(`; ${"lang"}=`);
+    if (parts.length === 2) return parts.pop().split(";").shift();
+  }
+}
+
+async function getLocalization(req) {
+  let language = acceptedLanguages[getLanguage(req)?.split("-")[0]]
+    ? getLanguage(req)?.split("-")[0]
+    : acceptedLanguages[req.headers["accept-language"]?.split("-")[0]]
+    ? req.headers["accept-language"]?.split("-")[0]
+    : "en";
+  let data = JSON.parse(fs.readFileSync(`./i18n/${language}.json`, "utf8"));
+  const inputString = JSON.stringify({
+    data,
+    language,
+  });
+
+  const textEncoder = new TextEncoder();
+  const encodedBytes = textEncoder.encode(inputString);
+  const base64String = btoa(String.fromCharCode.apply(null, encodedBytes));
+
+  return base64String;
+}
+
 app.get("/", async function (req, res) {
   res.render(path.join(__dirname, "/pages/index.html"), {
     count: await getUsercount(),
+    language: await getLocalization(req),
   });
 });
 
@@ -71,8 +108,12 @@ app.get("/goodbye/", async function (req, res) {
           },
           body: JSON.stringify({
             server: process.env.server,
-            timeInstalled: !!new Date(Number(req.query.installed.toString())).getTime()
-              ? new Date(Number(req.query.installed.toString())).getTime().toString()
+            timeInstalled: !!new Date(
+              Number(req.query.installed.toString())
+            ).getTime()
+              ? new Date(Number(req.query.installed.toString()))
+                  .getTime()
+                  .toString()
               : null,
             timeUninstalled: Date.now(),
             features: req.query.code || null,
@@ -84,11 +125,14 @@ app.get("/goodbye/", async function (req, res) {
       ).json();
     } catch (err) {}
   }
-  res.sendFile(path.join(__dirname, "/pages/goodbye.html"));
+  res.render(path.join(__dirname, "/pages/goodbye.html"), {
+    language: await getLocalization(req),
+  });
 });
 
 app.get("/contributors/", async function (req, res) {
   res.render(path.join(__dirname, "/pages/contributors.html"), {
+      language: await getLocalization(req),
     credits: btoa(
       JSON.stringify(
         await (
@@ -103,6 +147,7 @@ app.get("/contributors/", async function (req, res) {
 
 app.get("/credits/", async function (req, res) {
   res.render(path.join(__dirname, "/pages/contributors.html"), {
+      language: await getLocalization(req),
     credits: btoa(
       JSON.stringify(
         await (
@@ -116,7 +161,9 @@ app.get("/credits/", async function (req, res) {
 });
 
 app.get("/feedback/", async function (req, res) {
-  res.sendFile(path.join(__dirname, "/pages/feedback.html"));
+  res.render(path.join(__dirname, "/pages/feedback.html"), {
+    language: await getLocalization(req),
+  });
 });
 
 app.get("/features/", async function (req, res) {
@@ -128,6 +175,7 @@ app.get("/features/", async function (req, res) {
   );
   res.render(path.join(__dirname, "/pages/features.html"), {
     features: btoa(JSON.stringify(data)),
+    language: await getLocalization(req),
   });
 });
 
@@ -162,8 +210,10 @@ app.get("/:code", function (req, res, next) {
   }
 });
 
-app.use(function (req, res) {
-  res.sendFile(path.join(__dirname, "/pages/404.html"));
+app.use(async function (req, res) {
+  res.render(path.join(__dirname, "/pages/404.html"), {
+    language: await getLocalization(req),
+  });
 });
 
 app.listen(PORT);

@@ -1,0 +1,93 @@
+{
+  "banner.slogan": {
+    "message": "Scratchのための完璧な拡張機能。"
+  },
+  "nav.docs": {
+    "message": "ドキュメント"
+  },
+  "nav.contribute": {
+    "message": "貢献する"
+  },
+  "nav.get": {
+    "message": "ScratchToolsを入手"
+  },
+  "home.body.about": {
+    "message": "ScratchToolsについて"
+  },
+  "home.body.aboutLong": {
+    "message": "ScratchToolsは、Scratchのためにコミュニティによって作られたChromeとFirefoxの拡張機能です。Scratchをより使いやすくするために、ScratchのUIに数十の編集を加え、Scratchをこれまで以上に優れたものにします。私たちの開発者、アーティスト、発案者、ベータテスター、プレスリリースマネージャーは全員Scratchから来ています。"
+  },
+  "home.features.title": {
+    "message": "機能"
+  },
+  "home.features.short": {
+    "message": "ScratchToolsに含まれている機能の一部を紹介します。"
+  },
+  "home.features.more": {
+    "message": "100個以上の全ての機能を見る"
+  },
+  "home.download.title": {
+    "message": "ダウンロード"
+  },
+  "home.download.short": {
+    "message": "あなたのブラウザでScratchToolsをお楽しみください！"
+  },
+  "home.download.users": {
+    "message": "ダウンロード数"
+  },
+  "home.download.available": {
+    "message": "ScratchToolsは ChromeでもFirefoxでもMicrosoft Edgeでもお使いいただけます！"
+  },
+  "404.main.error": {
+    "message": "ページが見つかりません"
+  },
+  "404.main.weird": {
+    "message": "これはちょっと奇妙だな…"
+  },
+  "404.main.link": {
+    "message": "リンクによってここに移動した場合、そのリンクは機能しなくなっています。"
+  },
+  "credits.meta.title": {
+    "message": "クレジット | ScratchTools"
+  },
+  "credits.main.title": {
+    "message": "クレジット"
+  },
+  "credits.main.short": {
+    "message": "以下は、ScratchToolsの開発に貢献してくれた方々です。"
+  },
+  "features.meta.title": {
+    "message": "機能 | ScratchTools"
+  },
+  "features.main.title": {
+    "message": "機能"
+  },
+  "features.main.short": {
+    "message": "ScratchToolsには100個以上のユニークな機能が含まれています！"
+  },
+  "feedback.meta.title": {
+    "message": "フィードバック | ScratchTools"
+  },
+  "feedback.main.title": {
+    "message": "フィードバック"
+  },
+  "feedback.main.short": {
+    "message": "フィードバックがありますか？以下のフォームにご記入ください！"
+  },
+  "feedback.form.label": {
+    "message": "以下のフォームにフィードバックを記入してをください。"
+  },
+  "feedback.form.submit": { "message": "フィードバックを送信する" },
+  "goodbye.main.title": {
+    "message": "さようなら"
+  },
+  "goodbye.main.short": {
+    "message": "あなたがいなくなるのは寂しいです。"
+  },
+  "goodbye.main.long": {
+    "message": "私たちは、あなたにはあなたの理由があることを理解していますし、あなたが去るのを悲しんでいます。もし具体的な理由があれば、ご意見をお聞かせください。"
+  },
+  "goodbye.main.feedback": {
+    "message": "フィードバックを書く"
+  }
+}

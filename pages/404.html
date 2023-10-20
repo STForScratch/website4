@@ -22,10 +22,10 @@
     </div>
     <div class="title-stuff">
         <h1 class="title">404</h1>
-    <p>We couldn't find the page you were looking for!</p>
+    <p data-locale="404.main.error">We couldn't find the page you were looking for!</p>
     </div>
-    <h2>That's kinda weird...</h2>
-    <p>If a link sent you here, then the link is no longer working.</p>
+    <h2 data-locale="404.main.weird">That's kinda weird...</h2>
+    <p data-locale="404.main.link">If a link sent you here, then the link is no longer working.</p>
     <footer>
       <div class="about">
         <img class="footer-logo" src="/images/logo.svg" />
@@ -68,4 +68,36 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <script>
+    function decodeLocales() {
+      const base64String = "<%= language %>";
+      const byteCharacters = atob(base64String);
+      const byteArray = new Uint8Array(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteArray[i] = byteCharacters.charCodeAt(i);
+      }
+      const textDecoder = new TextDecoder();
+      window.messages = JSON.parse(textDecoder.decode(byteArray)).data;
+      Object.keys(messages).forEach(function (el) {
+        messages[el] = messages[el].message;
+      });
+      return;
+    }
+    decodeLocales();
+
+    document.querySelectorAll("*").forEach(function(el) {
+      if (el.dataset.locale) {
+        el.textContent = window.messages[el.dataset.locale]
+      }
+    })
+
+    document.querySelector(
+      ".nav .right a[href='https://docs.scratchtools.app']"
+    ).textContent = window.messages["nav.docs"];
+    document.querySelector(
+      ".nav .right a[href='https://github.com/STForScratch/ScratchTools']"
+    ).textContent = window.messages["nav.contribute"];
+    document.querySelector(".nav .right a.download-btn button").textContent =
+      window.messages["nav.get"];
+    </script>
 </html>

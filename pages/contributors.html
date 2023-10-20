@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Credits | ScratchTools</title>
+    <title data-locale="credits.meta.title">Credits | ScratchTools</title>
     <link rel="stylesheet" href="/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/images/logo.svg" />
@@ -21,8 +21,8 @@
       </div>
     </div>
     <div class="title-stuff">
-      <h1 class="title">Credits</h1>
-      <p>Here's everyone who has helped by contributing to ScratchTools.</p>
+      <h1 class="title" data-locale="credits.main.title">Credits</h1>
+      <p data-locale="credits.main.short">Here's everyone who has helped by contributing to ScratchTools.</p>
     </div>
     <div class="credits"></div>
     <script>
@@ -93,4 +93,36 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <script>
+    function decodeLocales() {
+      const base64String = "<%= language %>";
+      const byteCharacters = atob(base64String);
+      const byteArray = new Uint8Array(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteArray[i] = byteCharacters.charCodeAt(i);
+      }
+      const textDecoder = new TextDecoder();
+      window.messages = JSON.parse(textDecoder.decode(byteArray)).data;
+      Object.keys(messages).forEach(function (el) {
+        messages[el] = messages[el].message;
+      });
+      return;
+    }
+    decodeLocales();
+
+    document.querySelectorAll("*").forEach(function(el) {
+      if (el.dataset.locale) {
+        el.textContent = window.messages[el.dataset.locale]
+      }
+    })
+
+    document.querySelector(
+      ".nav .right a[href='https://docs.scratchtools.app']"
+    ).textContent = window.messages["nav.docs"];
+    document.querySelector(
+      ".nav .right a[href='https://github.com/STForScratch/ScratchTools']"
+    ).textContent = window.messages["nav.contribute"];
+    document.querySelector(".nav .right a.download-btn button").textContent =
+      window.messages["nav.get"];
+    </script>
 </html>
