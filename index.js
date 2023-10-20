@@ -71,7 +71,7 @@ async function getLocalization(req) {
     : acceptedLanguages[req.headers["accept-language"]?.split("-")[0]]
     ? req.headers["accept-language"]?.split("-")[0]
     : "en";
-  let data = JSON.parse(fs.readFileSync(`./i18n/${language}.json`, "utf8"));
+  let data = JSON.parse(fs.readFileSync(path.join(__dirname, `/i18n/${language}.json`, "utf8")));
   const inputString = JSON.stringify({
     data,
     language,
