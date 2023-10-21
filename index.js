@@ -51,6 +51,7 @@ async function getUsercount() {
 let acceptedLanguages = {
   en: true,
   ja: true,
+  tr: true,
 };
 
 function getLanguage(req) {

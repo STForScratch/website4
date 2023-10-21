@@ -1,0 +1,93 @@
+{
+  "banner.slogan": {
+    "message": "Scratch için mükemmel bir eklenti."
+  },
+  "nav.docs": {
+    "message": "Belgeler"
+  },
+  "nav.contribute": {
+    "message": "Katkıda Bulunun"
+  },
+  "nav.get": {
+    "message": "ScratchTools'i Edinin"
+  },
+  "home.body.about": {
+    "message": "ScratchTools Hakkında"
+  },
+  "home.body.aboutLong": {
+    "message": "ScratchTools, Scratch için topluluk tarafından geliştirilen bir Chrome ve Firefox eklentisidir. Scratch'i daha kullanıcı dostu hale getirmek amacıyla Scratch UI üzerinde onlarca düzenleme içerir. Geliştiricilerimiz, çevirmenlerimiz Tr çevirmen: (slm), sanatçılarımız, fikir üretenlerimiz, beta testçilerimiz ve basın bülteni yöneticilerimiz tamamen Scratch topluluğundan gelmektedir."
+  },
+  "home.features.title": {
+    "message": "Özellikler"
+  },
+  "home.features.short": {
+    "message": "İşte içerdiği özelliklerden bazıları."
+  },
+  "home.features.more": {
+    "message": "100'den fazla özelliğin tamamını görüntüle"
+  },
+  "home.download.title": {
+    "message": "İndir"
+  },
+  "home.download.short": {
+    "message": "Kendi tarayıcınızda ScratchTools'un keyfini çıkarın!"
+  },
+  "home.download.users": {
+    "message": "Kullanıcılar"
+  },
+  "home.download.available": {
+    "message": "ScratchTools, Chrome, Firefox ve Microsoft Edge'de mevcuttur!"
+  },
+  "404.main.error": {
+    "message": "Aranan sayfayı bulamadık!"
+  },
+  "404.main.weird": {
+    "message": "Bu biraz garip..."
+  },
+  "404.main.link": {
+    "message": "Eğer bir bağlantı sizi buraya yönlendirdiyse, o bağlantı artık çalışmıyor demektir."
+  },
+  "credits.meta.title": {
+    "message": "Katkılar | ScratchTools"
+  },
+  "credits.main.title": {
+    "message": "Katkılar"
+  },
+  "credits.main.short": {
+    "message": "İşte ScratchTools'a katkıda bulunarak yardımcı olan herkes"
+  },
+  "features.meta.title": {
+    "message": "Özellikler | ScratchTools"
+  },
+  "features.main.title": {
+    "message": "Özellikler"
+  },
+  "features.main.short": {
+    "message": "ScratchTools, 100'den fazla benzersiz özelliği içeriyor, işte bunlar!"
+  },
+  "feedback.meta.title": {
+    "message": "Geri Bildirim | ScratchTools"
+  },
+  "feedback.main.title": {
+    "message": "Geri Bildirim"
+  },
+  "feedback.main.short": {
+    "message": "ScratchTools için geri bildiriminiz mi var? Aşağıdaki formu doldurun, böylece geliştirmemize yardımcı olabilirsiniz!"
+  },
+  "feedback.form.label": {
+    "message": "Geri bildirim bırakmak için aşağıdaki formu doldurun."
+  },
+  "feedback.form.submit": { "message": "Geri Bildirimi Gönder" },
+  "goodbye.main.title": {
+    "message": "Hoşça kal"
+  },
+  "goodbye.main.short": {
+    "message": "Sizi özleyeceğiz."
+  },
+  "goodbye.main.long": {
+    "message": "Anladık ki ayrılma nedenleriniz var, ve sizi görmekten üzgünüz. Eğer ayrılmanıza neden olan özel bir sebep varsa, lütfen bize geri bildirimde bulunursanız memnun oluruz."
+  },
+  "goodbye.main.feedback": {
+    "message": "Geri Bildirim Gönder"
+  }
+}
