@@ -61,7 +61,9 @@
       />
     </svg>
     <h1 data-id="features-title">Features</h1>
-    <p data-id="features-short">Here are some of the features that it includes.</p>
+    <p data-id="features-short">
+      Here are some of the features that it includes.
+    </p>
     <div class="new-features">
       <div class="feature">
         <div class="colorful-design"></div>
@@ -156,6 +158,81 @@
           >
         </section>
       </div>
+      <div class="language-select closed">
+        <div class="active-language">
+          <img class="dropdown-arrow" src="/images/arrow.svg" />
+        </div>
+        <div class="other-languages"></div>
+      </div>
+      <script>
+        let languages = {
+          en: "English",
+          ja: "日本語",
+          tr: "Türkçe",
+        };
+
+        let langSelect = document.querySelector(".language-select");
+
+        Object.keys(languages).forEach(function (el) {
+          let option = document.createElement("div");
+          option.className = "lang-option";
+          option.dataset.lang = el;
+
+          let img = document.createElement("img");
+          img.src = `/flag/${el}`;
+
+          let span = document.createElement("span");
+          span.textContent = languages[el];
+
+          option.appendChild(img);
+          option.appendChild(span);
+
+          option.addEventListener("click", function () {
+            langSelect.classList.remove("open");
+            langSelect.classList.add("closed");
+            document.cookie =
+              "lang=" + el + "; expires=Thu, 18 Dec 9999 12:00:00 UTC; path=/";
+            window.location.href = window.location.href;
+          });
+
+          langSelect.querySelector(".other-languages").appendChild(option);
+        });
+
+        function setActiveLang() {
+          let lang = getActiveLanguage();
+          let img = document.createElement("img");
+          img.src = `/flag/${lang}/`;
+
+          let span = document.createElement("span");
+          span.textContent = languages[lang];
+
+          langSelect.querySelector(".active-language").prepend(img, span);
+        }
+        setActiveLang();
+
+        function getActiveLanguage() {
+          const base64String = "<%= language %>";
+          const byteCharacters = atob(base64String);
+          const byteArray = new Uint8Array(byteCharacters.length);
+          for (let i = 0; i < byteCharacters.length; i++) {
+            byteArray[i] = byteCharacters.charCodeAt(i);
+          }
+          const textDecoder = new TextDecoder();
+          return JSON.parse(textDecoder.decode(byteArray)).language;
+        }
+
+        document
+          .querySelector(".active-language")
+          .addEventListener("click", function () {
+            if (langSelect.className.includes("open")) {
+              langSelect.classList.remove("open");
+              langSelect.classList.add("closed");
+            } else {
+              langSelect.classList.add("open");
+              langSelect.classList.remove("closed");
+            }
+          });
+      </script>
     </footer>
   </body>
   <script>
@@ -197,23 +274,24 @@
 
     document.querySelector('h1[data-id="about"]').textContent =
       window.messages["home.body.about"];
-      document.querySelector('p[data-id="about-pg"]').textContent =
+    document.querySelector('p[data-id="about-pg"]').textContent =
       window.messages["home.body.aboutLong"];
 
-      document.querySelector('h1[data-id="features-title"]').textContent =
+    document.querySelector('h1[data-id="features-title"]').textContent =
       window.messages["home.features.title"];
-      document.querySelector('p[data-id="features-short"]').textContent =
+    document.querySelector('p[data-id="features-short"]').textContent =
       window.messages["home.features.short"];
 
-      document.querySelector("button.more-features").textContent = window.messages["home.features.more"]
+    document.querySelector("button.more-features").textContent =
+      window.messages["home.features.more"];
 
-      document.querySelector('[data-id="download-title"]').textContent =
+    document.querySelector('[data-id="download-title"]').textContent =
       window.messages["home.download.title"];
-      document.querySelector('[data-id="download-short"]').textContent =
+    document.querySelector('[data-id="download-short"]').textContent =
       window.messages["home.download.short"];
-      document.querySelector('[data-id="download-available"]').textContent =
+    document.querySelector('[data-id="download-available"]').textContent =
       window.messages["home.download.available"];
-      document.querySelector('[data-id="download-users"]').textContent =
+    document.querySelector('[data-id="download-users"]').textContent =
       window.messages["home.download.users"];
   </script>
 </html>

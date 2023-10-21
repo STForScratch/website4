@@ -92,8 +92,14 @@ app.get("/", async function (req, res) {
   });
 });
 
+app.get("/flag/:country/", function(req, res) {
+  res.sendFile(path.join(__dirname, `/i18n/flags/${req.params.country}.svg`))
+})
+
 app.get("/scratchformat/", async function (req, res) {
-  res.sendFile(path.join(__dirname, "/pages/scratchformat.html"));
+  res.render(path.join(__dirname, "/pages/scratchformat.html"), {
+    language: await getLocalization(req),
+  });
 });
 
 app.get("/goodbye/", async function (req, res) {

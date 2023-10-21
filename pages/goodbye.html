@@ -65,6 +65,81 @@
           >
         </section>
       </div>
+      <div class="language-select closed">
+        <div class="active-language">
+          <img class="dropdown-arrow" src="/images/arrow.svg" />
+        </div>
+        <div class="other-languages"></div>
+      </div>
+      <script>
+        let languages = {
+          en: "English",
+          ja: "日本語",
+          tr: "Türkçe",
+        };
+
+        let langSelect = document.querySelector(".language-select");
+
+        Object.keys(languages).forEach(function (el) {
+          let option = document.createElement("div");
+          option.className = "lang-option";
+          option.dataset.lang = el;
+
+          let img = document.createElement("img");
+          img.src = `/flag/${el}`;
+
+          let span = document.createElement("span");
+          span.textContent = languages[el];
+
+          option.appendChild(img);
+          option.appendChild(span);
+
+          option.addEventListener("click", function () {
+            langSelect.classList.remove("open");
+            langSelect.classList.add("closed");
+            document.cookie =
+              "lang=" + el + "; expires=Thu, 18 Dec 9999 12:00:00 UTC; path=/";
+            window.location.href = window.location.href;
+          });
+
+          langSelect.querySelector(".other-languages").appendChild(option);
+        });
+
+        function setActiveLang() {
+          let lang = getActiveLanguage();
+          let img = document.createElement("img");
+          img.src = `/flag/${lang}/`;
+
+          let span = document.createElement("span");
+          span.textContent = languages[lang];
+
+          langSelect.querySelector(".active-language").prepend(img, span);
+        }
+        setActiveLang();
+
+        function getActiveLanguage() {
+          const base64String = "<%= language %>";
+          const byteCharacters = atob(base64String);
+          const byteArray = new Uint8Array(byteCharacters.length);
+          for (let i = 0; i < byteCharacters.length; i++) {
+            byteArray[i] = byteCharacters.charCodeAt(i);
+          }
+          const textDecoder = new TextDecoder();
+          return JSON.parse(textDecoder.decode(byteArray)).language;
+        }
+
+        document
+          .querySelector(".active-language")
+          .addEventListener("click", function () {
+            if (langSelect.className.includes("open")) {
+              langSelect.classList.remove("open");
+              langSelect.classList.add("closed");
+            } else {
+              langSelect.classList.add("open");
+              langSelect.classList.remove("closed");
+            }
+          });
+      </script>
     </footer>
   </body>
   <script>
