@@ -478,13 +478,13 @@ footer .links a:hover {
 .language-select .active-language img {
   width: 2rem;
   position: relative;
-  top: .1rem;
+  top: .2rem;
 }
 
 .language-select .active-language span {
   font-weight: 600;
   margin-left: .5rem;
-  top: -.45rem;
+  top: -.4rem;
   position: relative;
 }
 
@@ -542,12 +542,12 @@ footer .links a:hover {
 .language-select .other-languages .lang-option img {
   width: 2rem;
   position: relative;
-  top: .1rem;
+  top: .2rem;
 }
 
 .language-select .other-languages .lang-option span {
   margin-left: .5rem;
-  top: -.45rem;
+  top: -.4rem;
   position: relative;
 }
 
