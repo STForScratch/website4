@@ -356,7 +356,7 @@ footer {
   background-color: #f0f0f0;
   position: relative;
   left: -8px;
-  width: 100vw;
+  width: calc(100vw - 6rem);
   bottom: -8px;
   padding: 3rem;
 }
