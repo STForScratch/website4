@@ -178,6 +178,21 @@
               langSelect.classList.remove("closed");
             }
           });
+
+          document.addEventListener("click", function (event) {
+          let allLangNodes = [];
+          document
+            .querySelectorAll(".language-select *")
+            .forEach(function (el) {
+              allLangNodes.push(el);
+            });
+          if (!allLangNodes.includes(event.target)) {
+            if (langSelect.className.includes("open")) {
+              langSelect.classList.remove("open");
+              langSelect.classList.add("closed");
+            }
+          }
+        });
       </script>
     </footer>
   </body>
