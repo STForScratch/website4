@@ -218,6 +218,10 @@ app.get("/:code", function (req, res, next) {
   }
 });
 
+app.get("/wrapped/", function(req, res) {
+  res.redirect("https://wrapped.scratchtools.app")
+})
+
 app.use(async function (req, res) {
   res.render(path.join(__dirname, "/pages/404.html"), {
     language: await getLocalization(req),
