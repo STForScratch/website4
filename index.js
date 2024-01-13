@@ -222,6 +222,10 @@ app.get("/wrapped/", function(req, res) {
   res.redirect("https://wrapped.scratchtools.app")
 })
 
+app.get("/awards/", function(req, res) {
+  res.redirect("https://data.scratchtools.app/submission/")
+})
+
 app.get("/projects/:user/:offset/", async function(req, res) {
   let data = await (await fetch(`https://api.scratch.mit.edu/users/${req.params.user}/projects?limit=40&offset=${req.params.offset}`)).json()
   res.send(data)
