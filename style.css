@@ -285,29 +285,30 @@ div.feature p {
   top: -0.5rem;
   margin-left: 60px;
 }
-h3 {
-    text-align: center;
+
+.credit img {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 1rem;
+  margin-left: 57px;
 }
 
+h3 {
+  text-align: center;
+}
 
 div.feature h2 {
   font-size: 1.1rem;
 }
 
 .beta-colorful-design {
-    display: none;
+  display: none;
 }
 
 .credits {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
-.credit img {
-  width: 5.5rem;
-  height: 5.5rem;
-  border-radius: 1rem;
-  margin-left: 57px;
 
-}
 
 .new-features > div.feature p {
   margin-top: -0.5rem;
