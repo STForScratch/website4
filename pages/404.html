@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>404 | ScratchTools</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style.css?nocache=2" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/images/logo.svg" />
   </head>
@@ -15,17 +15,24 @@
       <div class="right">
         <a href="https://docs.scratchtools.app">Docs</a>
         <a href="https://github.com/STForScratch/ScratchTools">Contribute</a>
-        <a class="download-btn" href="https://chrome.google.com/webstore/detail/scratchtools/jjnpbalpllpfdpgplpbcbadkgdmleopm">
+        <a
+          class="download-btn"
+          href="https://chrome.google.com/webstore/detail/scratchtools/jjnpbalpllpfdpgplpbcbadkgdmleopm"
+        >
           <button>Get ScratchTools</button>
         </a>
       </div>
     </div>
     <div class="title-stuff">
-        <h1 class="title">404</h1>
-    <p>We couldn't find the page you were looking for!</p>
+      <h1 class="title">404</h1>
+      <p data-locale="404.main.error">
+        We couldn't find the page you were looking for!
+      </p>
     </div>
-    <h2>That's kinda weird...</h2>
-    <p>If a link sent you here, then the link is no longer working.</p>
+    <h2 data-locale="404.main.weird">That's kinda weird...</h2>
+    <p data-locale="404.main.link">
+      If a link sent you here, then the link is no longer working.
+    </p>
     <footer>
       <div class="about">
         <img class="footer-logo" src="/images/logo.svg" />
@@ -36,7 +43,7 @@
           <b>Socials</b>
           <a href="https://youtube.com/@ScratchTools">YouTube</a>
           <a href="https://twitter.com/STForScratch">Twitter</a>
-          <a href="https://data.scratchtools.app">Community Discord</a>
+          <a href="https://server.scratchtools.app">Community Discord</a>
           <a href="https://discord.gg/kzScDPxE9J">Developer Discord</a>
         </section>
         <section class="links">
@@ -62,6 +69,137 @@
           >
         </section>
       </div>
+      <div class="language-select closed">
+        <div class="active-language">
+          <img class="dropdown-arrow" src="/images/arrow.svg" />
+        </div>
+        <div class="other-languages"></div>
+      </div>
+      <script>
+        let languages = {
+          en: "English",
+          ja: "日本語",
+          tr: "Türkçe",
+          fr: "Français",
+        };
+
+        let langSelect = document.querySelector(".language-select");
+
+        Object.keys(languages).forEach(function (el) {
+          let option = document.createElement("div");
+          option.className = "lang-option";
+          option.dataset.lang = el;
+
+          let img = document.createElement("img");
+          img.src = `/flag/${el}`;
+
+          let span = document.createElement("span");
+          span.textContent = languages[el];
+
+          option.appendChild(img);
+          option.appendChild(span);
+
+          option.addEventListener("click", function () {
+            langSelect.classList.remove("open");
+            langSelect.classList.add("closed");
+            document.cookie =
+              "lang=" + el + "; expires=Thu, 18 Dec 9999 12:00:00 UTC; path=/";
+            window.location.href = window.location.href;
+          });
+
+          langSelect.querySelector(".other-languages").appendChild(option);
+        });
+
+        function setActiveLang() {
+          let lang = getActiveLanguage();
+          let img = document.createElement("img");
+          img.src = `/flag/${lang}/`;
+
+          let span = document.createElement("span");
+          span.textContent = languages[lang];
+
+          langSelect.querySelector(".active-language").prepend(img, span);
+        }
+        setActiveLang();
+
+        function getActiveLanguage() {
+          const base64String = "<%= language %>";
+          const byteCharacters = atob(base64String);
+          const byteArray = new Uint8Array(byteCharacters.length);
+          for (let i = 0; i < byteCharacters.length; i++) {
+            byteArray[i] = byteCharacters.charCodeAt(i);
+          }
+          const textDecoder = new TextDecoder();
+          return JSON.parse(textDecoder.decode(byteArray)).language;
+        }
+
+        document
+          .querySelector(".active-language")
+          .addEventListener("click", function () {
+            if (langSelect.className.includes("open")) {
+              langSelect.classList.remove("open");
+              langSelect.classList.add("closed");
+            } else {
+              langSelect.classList.add("open");
+              langSelect.classList.remove("closed");
+            }
+          });
+
+          document.addEventListener("click", function (event) {
+          let allLangNodes = [];
+          document
+            .querySelectorAll(".language-select *")
+            .forEach(function (el) {
+              allLangNodes.push(el);
+            });
+          if (!allLangNodes.includes(event.target)) {
+            if (langSelect.className.includes("open")) {
+              langSelect.classList.remove("open");
+              langSelect.classList.add("closed");
+            }
+          }
+        });
+      </script>
     </footer>
   </body>
+  <script>
+    window.va =
+      window.va ||
+      function () {
+        (window.vaq = window.vaq || []).push(arguments);
+      };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script>
+    function decodeLocales() {
+      const base64String = "<%= language %>";
+      const byteCharacters = atob(base64String);
+      const byteArray = new Uint8Array(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteArray[i] = byteCharacters.charCodeAt(i);
+      }
+      const textDecoder = new TextDecoder();
+      window.messages = JSON.parse(textDecoder.decode(byteArray)).data;
+      Object.keys(messages).forEach(function (el) {
+        messages[el] = messages[el].message;
+      });
+      return;
+    }
+    decodeLocales();
+
+    document.querySelectorAll("*").forEach(function (el) {
+      if (el.dataset.locale) {
+        el.textContent = window.messages[el.dataset.locale];
+      }
+    });
+
+    document.querySelector(
+      ".nav .right a[href='https://docs.scratchtools.app']"
+    ).textContent = window.messages["nav.docs"];
+    document.querySelector(
+      ".nav .right a[href='https://github.com/STForScratch/ScratchTools']"
+    ).textContent = window.messages["nav.contribute"];
+    document.querySelector(".nav .right a.download-btn button").textContent =
+      window.messages["nav.get"];
+  </script>
 </html>

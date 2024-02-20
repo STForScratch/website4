@@ -265,15 +265,7 @@ div.credit {
   margin: 0.5rem;
   height: 18rem;
   overflow-y: hidden;
-}
-
-.credit img {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 1rem;
-    position: relative;
-    top: -6.35rem;
-    left: -6rem;
+  position: relative;
 }
 
 div.credit {
@@ -291,31 +283,32 @@ div.feature p {
   text-decoration: none;
   position: relative;
   top: -0.5rem;
+  margin-left: 60px;
+}
+
+.credit img {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 1rem;
+  margin-left: 66px;
+}
+
+h3 {
+  text-align: center;
 }
 
 div.feature h2 {
   font-size: 1.1rem;
 }
 
-.colorful-design {
-  background: linear-gradient(45deg, #ff9f00, #ffad42);
-  height: 8rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  border: 0px;
+.beta-colorful-design {
+  display: none;
 }
 
 .credits {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
-.beta-colorful-design {
-  background: linear-gradient(45deg, #00a2ff, #29b0ff);
-  height: 8rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  border: 0px;
-}
 
 .new-features > div.feature p {
   margin-top: -0.5rem;
@@ -354,7 +347,7 @@ footer {
   background-color: #f0f0f0;
   position: relative;
   left: -8px;
-  width: 100vw;
+  width: calc(100vw - 6rem);
   bottom: -8px;
   padding: 3rem;
 }
@@ -463,4 +456,98 @@ footer .links a:hover {
   .nav .right {
     margin-right: 1rem;
   }
+}
+
+.language-select {
+  width: 15rem;
+  max-width: 100%;
+  display: inline-block;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.language-select .active-language img {
+  width: 2rem;
+  position: relative;
+  top: .2rem;
+}
+
+.language-select .active-language span {
+  font-weight: 600;
+  margin-left: .5rem;
+  top: -.4rem;
+  position: relative;
+}
+
+.language-select .active-language .dropdown-arrow {
+  position: absolute;
+  right: 1rem;
+  top: .65rem;
+}
+
+.language-select .active-language {
+  background-color: #f0f0f0;
+  transition: background-color .3s;
+  padding: .5rem;
+  color: black;
+  border-radius: .5rem;
+  text-align: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.language-select .active-language:hover {
+  background-color: #d1d1d150;
+}
+
+.language-select .other-languages {
+  background-color: white;
+  color: black;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  text-align: left;
+  position: absolute;
+  bottom: 100%;
+  width: 15rem;
+  max-width: 100%;
+}
+
+.language-select .other-languages .lang-option {
+  padding: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.language-select .other-languages .lang-option:first-child {
+  border-top-left-radius: .35rem;
+  border-top-right-radius: .35rem;
+}
+
+.language-select .other-languages .lang-option:hover {
+  background-color: #f0f0f0;
+}
+
+.language-select .other-languages .lang-option img {
+  width: 2rem;
+  position: relative;
+  top: .2rem;
+}
+
+.language-select .other-languages .lang-option span {
+  margin-left: .5rem;
+  top: -.4rem;
+  position: relative;
+}
+
+.language-select.closed .other-languages {
+  display: none;
+}
+
+.language-select.open div.active-language {
+  background-color: #d1d1d150;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
 }

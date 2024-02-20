@@ -2,9 +2,9 @@
 <html>
   <head>
     <title>ScratchTools</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style.css?nocache=2" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/images/logo.svg">
+    <link rel="icon" href="/images/logo.svg" />
   </head>
   <body class="top-part">
     <div class="nav">
@@ -15,7 +15,10 @@
       <div class="right">
         <a href="https://docs.scratchtools.app">Docs</a>
         <a href="https://github.com/STForScratch/ScratchTools">Contribute</a>
-        <a class="download-btn" href="https://chrome.google.com/webstore/detail/scratchtools/jjnpbalpllpfdpgplpbcbadkgdmleopm">
+        <a
+          class="download-btn"
+          href="https://chrome.google.com/webstore/detail/scratchtools/jjnpbalpllpfdpgplpbcbadkgdmleopm"
+        >
           <button>Get ScratchTools</button>
         </a>
       </div>
@@ -29,8 +32,8 @@
         <h1>The perfect extension for Scratch.</h1>
       </div>
     </div>
-    <h1>About ScratchTools</h1>
-    <p style="margin-left: 15%; margin-right: 15%">
+    <h1 data-id="about">About ScratchTools</h1>
+    <p style="margin-left: 15%; margin-right: 15%" data-id="about-pg">
       ScratchTools is a community-built Chrome and Firefox extension made for
       Scratch. It makes Scratching easier, through dozens of edits to the
       Scratch UI to make Scratch better than ever. Our group of developers,
@@ -57,8 +60,10 @@
         d="m1256,85.56v50.57c-39.97,21.07-102.24,41.36-199.06,51.63-16.5,1.75-31.79,2.63-46.02,2.63-34.23,0-62.37-5.1-86.6-15.52-31.34-13.48-51.49-33.92-70.97-53.68-18.6-18.87-36.17-36.69-64.44-50.85-32.85-16.47-75.67-25.18-130.9-26.65-138.67-3.68-198.36,32.06-261.57,69.9-52.91,31.67-107.62,64.42-206.49,74.18-51.43,5.08-96.59.64-134.23-13.19-20.97-7.72-39.62-18.31-55.72-31.63v-65.12c3.55,5.68,7.76,11.49,12.76,17.18,15.38,17.5,35.36,30.73,59.36,39.32,31.17,11.15,69.38,14.59,113.56,10.23,89.19-8.81,137.4-37.68,188.45-68.24C439.88,36.96,507.87-3.75,659.16.28c61.73,1.64,110.54,11.85,149.21,31.23,34.69,17.38,56.59,39.6,75.91,59.19,18.06,18.32,33.66,34.15,57.2,44.27,27.18,11.69,62.41,14.74,110.88,9.6,59.86-6.35,142.41-20.84,195.73-53.82,2.84-1.76,5.48-3.5,7.91-5.19Z"
       />
     </svg>
-    <h1>Features</h1>
-    <p>Here are some of the features that it includes.</p>
+    <h1 data-id="features-title">Features</h1>
+    <p data-id="features-short">
+      Here are some of the features that it includes.
+    </p>
     <div class="new-features">
       <div class="feature">
         <div class="colorful-design"></div>
@@ -86,12 +91,14 @@
         </p>
       </div>
     </div>
-    <a href="/features/"><button class="more-features">View All 100+ Features</button></a>
-    <h1>Download</h1>
-    <p>Enjoy ScratchTools in your own browser!</p>
+    <a href="/features/"
+      ><button class="more-features">View All 100+ Features</button></a
+    >
+    <h1 data-id="download-title">Download</h1>
+    <p data-id="download-short">Enjoy ScratchTools in your own browser!</p>
     <div class="split-sections">
       <div class="section-left">
-        <h4>
+        <h4 data-id="download-available">
           ScratchTools is available on Chrome, Firefox, and Microsoft Edge!
         </h4>
         <a
@@ -109,9 +116,10 @@
       <div class="section-right">
         <h1 class="count"></h1>
         <script>
-          document.querySelector(".count").textContent = Number("<%= count %>").toLocaleString()
+          document.querySelector(".count").textContent =
+            Number("<%= count %>").toLocaleString();
         </script>
-        <h4>Users</h4>
+        <h4 data-id="download-users">Users</h4>
       </div>
     </div>
     <footer>
@@ -124,24 +132,182 @@
           <b>Socials</b>
           <a href="https://youtube.com/@ScratchTools">YouTube</a>
           <a href="https://twitter.com/STForScratch">Twitter</a>
-          <a href="https://data.scratchtools.app">Community Discord</a>
+          <a href="https://server.scratchtools.app">Community Discord</a>
           <a href="https://discord.gg/kzScDPxE9J">Developer Discord</a>
         </section>
         <section class="links">
           <b>Development</b>
           <a href="https://github.com/STForScratch/ScratchTools">Repository</a>
           <a href="https://github.com/STForScratch">Organization</a>
-          <a href="https://docs.scratchtools.app/docs/contributing/how">Documentation</a>
-          <a href="https://explore.transifex.com/scratchtools/scratchtools/">Localization</a>
+          <a href="https://docs.scratchtools.app/docs/contributing/how"
+            >Documentation</a
+          >
+          <a href="https://explore.transifex.com/scratchtools/scratchtools/"
+            >Localization</a
+          >
         </section>
         <section class="links">
           <b>Resources</b>
           <a href="/feedback/">Feedback</a>
-          <a href="https://docs.scratchtools.app/docs/privacy-policy">Privacy Policy</a>
+          <a href="https://docs.scratchtools.app/docs/privacy-policy"
+            >Privacy Policy</a
+          >
           <a href="https://docs.scratchtools.app/blog">Blog</a>
-          <a href="https://github.com/STForScratch/ScratchTools/discussions">Discussions</a>
+          <a href="https://github.com/STForScratch/ScratchTools/discussions"
+            >Discussions</a
+          >
         </section>
       </div>
+      <div class="language-select closed">
+        <div class="active-language">
+          <img class="dropdown-arrow" src="/images/arrow.svg" />
+        </div>
+        <div class="other-languages"></div>
+      </div>
+      <script>
+        let languages = {
+          en: "English",
+          ja: "日本語",
+          tr: "Türkçe",
+          fr: "Français",
+        };
+
+        let langSelect = document.querySelector(".language-select");
+
+        Object.keys(languages).forEach(function (el) {
+          let option = document.createElement("div");
+          option.className = "lang-option";
+          option.dataset.lang = el;
+
+          let img = document.createElement("img");
+          img.src = `/flag/${el}`;
+
+          let span = document.createElement("span");
+          span.textContent = languages[el];
+
+          option.appendChild(img);
+          option.appendChild(span);
+
+          option.addEventListener("click", function () {
+            langSelect.classList.remove("open");
+            langSelect.classList.add("closed");
+            document.cookie =
+              "lang=" + el + "; expires=Thu, 18 Dec 9999 12:00:00 UTC; path=/";
+            window.location.href = window.location.href;
+          });
+
+          langSelect.querySelector(".other-languages").appendChild(option);
+        });
+
+        function setActiveLang() {
+          let lang = getActiveLanguage();
+          let img = document.createElement("img");
+          img.src = `/flag/${lang}/`;
+
+          let span = document.createElement("span");
+          span.textContent = languages[lang];
+
+          langSelect.querySelector(".active-language").prepend(img, span);
+        }
+        setActiveLang();
+
+        function getActiveLanguage() {
+          const base64String = "<%= language %>";
+          const byteCharacters = atob(base64String);
+          const byteArray = new Uint8Array(byteCharacters.length);
+          for (let i = 0; i < byteCharacters.length; i++) {
+            byteArray[i] = byteCharacters.charCodeAt(i);
+          }
+          const textDecoder = new TextDecoder();
+          return JSON.parse(textDecoder.decode(byteArray)).language;
+        }
+
+        document
+          .querySelector(".active-language")
+          .addEventListener("click", function () {
+            if (langSelect.className.includes("open")) {
+              langSelect.classList.remove("open");
+              langSelect.classList.add("closed");
+            } else {
+              langSelect.classList.add("open");
+              langSelect.classList.remove("closed");
+            }
+          });
+
+        document.addEventListener("click", function (event) {
+          let allLangNodes = [];
+          document
+            .querySelectorAll(".language-select *")
+            .forEach(function (el) {
+              allLangNodes.push(el);
+            });
+          if (!allLangNodes.includes(event.target)) {
+            if (langSelect.className.includes("open")) {
+              langSelect.classList.remove("open");
+              langSelect.classList.add("closed");
+            }
+          }
+        });
+      </script>
     </footer>
   </body>
+  <script>
+    window.va =
+      window.va ||
+      function () {
+        (window.vaq = window.vaq || []).push(arguments);
+      };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script>
+    function decodeLocales() {
+      const base64String = "<%= language %>";
+      const byteCharacters = atob(base64String);
+      const byteArray = new Uint8Array(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteArray[i] = byteCharacters.charCodeAt(i);
+      }
+      const textDecoder = new TextDecoder();
+      window.messages = JSON.parse(textDecoder.decode(byteArray)).data;
+      Object.keys(messages).forEach(function (el) {
+        messages[el] = messages[el].message;
+      });
+      return;
+    }
+    decodeLocales();
+
+    document.querySelector(".half.perfect h1").textContent =
+      window.messages["banner.slogan"];
+
+    document.querySelector(
+      ".nav .right a[href='https://docs.scratchtools.app']"
+    ).textContent = window.messages["nav.docs"];
+    document.querySelector(
+      ".nav .right a[href='https://github.com/STForScratch/ScratchTools']"
+    ).textContent = window.messages["nav.contribute"];
+    document.querySelector(".nav .right a.download-btn button").textContent =
+      window.messages["nav.get"];
+
+    document.querySelector('h1[data-id="about"]').textContent =
+      window.messages["home.body.about"];
+    document.querySelector('p[data-id="about-pg"]').textContent =
+      window.messages["home.body.aboutLong"];
+
+    document.querySelector('h1[data-id="features-title"]').textContent =
+      window.messages["home.features.title"];
+    document.querySelector('p[data-id="features-short"]').textContent =
+      window.messages["home.features.short"];
+
+    document.querySelector("button.more-features").textContent =
+      window.messages["home.features.more"];
+
+    document.querySelector('[data-id="download-title"]').textContent =
+      window.messages["home.download.title"];
+    document.querySelector('[data-id="download-short"]').textContent =
+      window.messages["home.download.short"];
+    document.querySelector('[data-id="download-available"]').textContent =
+      window.messages["home.download.available"];
+    document.querySelector('[data-id="download-users"]').textContent =
+      window.messages["home.download.users"];
+  </script>
 </html>
