@@ -223,7 +223,7 @@ app.get("/wrapped/", function(req, res) {
 })
 
 app.get("/awards/", function(req, res) {
-  res.redirect("https://data.scratchtools.app/submission/")
+  res.redirect("https://youtu.be/sGfxaLhyQIs")
 })
 
 app.get("/newsroom/", function(req, res) {
