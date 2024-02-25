@@ -268,15 +268,6 @@ div.credit {
   position: relative;
 }
 
-.credit img {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 1rem;
-    position: absolute;
-    top: 6.5rem;
-    left: 1.5rem;
-}
-
 div.credit {
   width: 14rem;
   height: 14rem;
@@ -292,32 +283,32 @@ div.feature p {
   text-decoration: none;
   position: relative;
   top: -0.5rem;
+  margin-left: 60px;
+}
+
+.credit img {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 1rem;
+  margin-left: 66px;
+}
+
+h3 {
+  text-align: center;
 }
 
 div.feature h2 {
   font-size: 1.1rem;
 }
 
-.colorful-design {
-  background-size: cover;
-  background-position: center center;
-  height: 8rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  border: 0px;
+.beta-colorful-design {
+  display: none;
 }
 
 .credits {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
-.beta-colorful-design {
-  background: linear-gradient(45deg, #00a2ff, #29b0ff);
-  height: 8rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  border: 0px;
-}
 
 .new-features > div.feature p {
   margin-top: -0.5rem;
