@@ -1,0 +1,93 @@
+{
+  "banner.slogan": {
+    "message": "La extensión perfecta para Scratch."
+  },
+  "nav.docs": {
+    "message": "Docs"
+  },
+  "nav.contribute": {
+    "message": "Contribuir"
+  },
+  "nav.get": {
+    "message": "Obtener ScratchTools"
+  },
+  "home.body.about": {
+    "message": "Acerca de ScratchTools"
+  },
+  "home.body.aboutLong": {
+    "message": "ScratchTools es una extensión construida por la comunidad para Chrome y Firefox hecha para Scratch. Facilita el uso de Scratch, a través de docenas de cambios en su interfaz para hacer que sea mejor que nunca. Nuestro grupo de desarrolladores, artistas, creadores de ideas, probadores beta, y administradores de comunicados de prensa, vienen todos de Scratch."
+  },
+  "home.features.title": {
+    "message": "Características"
+  },
+  "home.features.short": {
+    "message": "Aquí hay algunas de las características que incluye."
+  },
+  "home.features.more": {
+    "message": "Ver Todas Las 100+ Características"
+  },
+  "home.download.title": {
+    "message": "Descargar"
+  },
+  "home.download.short": {
+    "message": "¡Disfruta ScratchTools en tu propio navegador!"
+  },
+  "home.download.users": {
+    "message": "Usuarios"
+  },
+  "home.download.available": {
+    "message": "¡ScratchTools está disponible en Chrome, Firefox, y Microsoft Edge!"
+  },
+  "404.main.error": {
+    "message": "¡No pudimos encontrar la página que estabas buscando!"
+  },
+  "404.main.weird": {
+    "message": "Eso es un poco raro..."
+  },
+  "404.main.link": {
+    "message": "Si un enlace te llevó aquí, entonces el enlace ya no funciona."
+  },
+  "credits.meta.title": {
+    "message": "Créditos | ScratchTools"
+  },
+  "credits.main.title": {
+    "message": "Créditos"
+  },
+  "credits.main.short": {
+    "message": "Aquí están todos los que ayudaron contribuyendo a ScratchTools."
+  },
+  "features.meta.title": {
+    "message": "Características | ScratchTools"
+  },
+  "features.main.title": {
+    "message": "Características"
+  },
+  "features.main.short": {
+    "message": "ScratchTools incluye 100+ características únicas, ¡aquí están!"
+  },
+  "feedback.meta.title": {
+    "message": "Comentarios | ScratchTools"
+  },
+  "feedback.main.title": {
+    "message": "Comentarios"
+  },
+  "feedback.main.short": {
+    "message": "¿Tienes comentarios sobre ScratchTools? ¡Llena el formulario abajo para que podamos mejorar!"
+  },
+  "feedback.form.label": {
+    "message": "Llena el formulario abajo para dejar comentarios"
+  },
+  "feedback.form.submit": { "message": "Publicar Comentarios" },
+  "goodbye.main.title": {
+    "message": "Adiós"
+  },
+  "goodbye.main.short": {
+    "message": "Te extrañaremos."
+  },
+  "goodbye.main.long": {
+    "message": "Entendemos que tienes tus razones, y estamos tristes de que te vayas. Si hay una razón específica por la que te has ido, lo agradeceríamos si nos podrías dejar comentarios."
+  },
+  "goodbye.main.feedback": {
+    "message": "Dejar Comentarios"
+  }
+}
