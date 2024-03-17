@@ -1,0 +1,93 @@
+{
+  "banner.slogan": {
+    "message": "Meow purrrrr purr meow"
+  },
+  "nav.docs": {
+    "message": "Meow"
+  },
+  "nav.contribute": {
+    "message": "Hissss"
+  },
+  "nav.get": {
+    "message": "Purrrr ScratchTools"
+  },
+  "home.body.about": {
+    "message": "Meow Meow ScratchTools"
+  },
+  "home.body.aboutLong": {
+    "message": "ScratchTools meow purrrr meow meow hiss purr hiss meow. Meow meow hisssss purrrr meow purr hiss hisssss meow meow meow. Purrrr meow hiss hiss hisssss purr."
+  },
+  "home.features.title": {
+    "message": "Meow Purrrr"
+  },
+  "home.features.short": {
+    "message": "Meow purr hiss meow purrrr."
+  },
+  "home.features.more": {
+    "message": "Meow Meow Meow Purrrr"
+  },
+  "home.download.title": {
+    "message": "Hisssss Meow"
+  },
+  "home.download.short": {
+    "message": "Meow ScratchTools meow hiss purrrrr!"
+  },
+  "home.download.users": {
+    "message": "Meow Hissss"
+  },
+  "home.download.available": {
+    "message": "ScratchTools meow hisssss purrrrr meow meow hiss!"
+  },
+  "404.main.error": {
+    "message": "Meow hisss purr!"
+  },
+  "404.main.weird": {
+    "message": "Meow..."
+  },
+  "404.main.link": {
+    "message": "Meow purr hissssss meow."
+  },
+  "credits.meta.title": {
+    "message": "Meow Purrrrr | ScratchTools"
+  },
+  "credits.main.title": {
+    "message": "Meow Purrrrr"
+  },
+  "credits.main.short": {
+    "message": "Meow purrr hisss hisssss ScratchTools."
+  },
+  "features.meta.title": {
+    "message": "Meow Purrrr | ScratchTools"
+  },
+  "features.main.title": {
+    "message": "Meow Purrrr"
+  },
+  "features.main.short": {
+    "message": "ScratchTools meow purrrr hiss meow purrr meow meow!"
+  },
+  "feedback.meta.title": {
+    "message": "Meowwww | ScratchTools"
+  },
+  "feedback.main.title": {
+    "message": "Meowwww"
+  },
+  "feedback.main.short": {
+    "message": "Meow purr meowwww ScratchTools? Meow meow purrrr meow hiss!"
+  },
+  "feedback.form.label": {
+    "message": "Meow hissss hiss meow purrrr meowwww"
+  },
+  "feedback.form.submit": { "message": "Meow Meowwww" },
+  "goodbye.main.title": {
+    "message": "Hissssss"
+  },
+  "goodbye.main.short": {
+    "message": "Meow meow meow."
+  },
+  "goodbye.main.long": {
+    "message": "Meow purrr hiss hissss meowwww. Purrrr meow meowww hiss."
+  },
+  "goodbye.main.feedback": {
+    "message": "Meow Meowwww"
+  }
+}
