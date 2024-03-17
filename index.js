@@ -54,6 +54,7 @@ let acceptedLanguages = {
   tr: true,
   fr: true,
   es: true,
+  pl: true,
 };
 
 function getLanguage(req) {

@@ -1,0 +1,93 @@
+{
+  "banner.slogan": {
+    "message": "Perfekcyjne rozszerzenie do Scratcha."
+  },
+  "nav.docs": {
+    "message": "Dokumentacja"
+  },
+  "nav.contribute": {
+    "message": "Repozytorium"
+  },
+  "nav.get": {
+    "message": "Pobierz ScratchTools"
+  },
+  "home.body.about": {
+    "message": "O ScratchTools"
+  },
+  "home.body.aboutLong": {
+    "message": "ScratchTools to stworzone przez społeczność rozszerzenie dla przeglądarek Chrome i Firefox. Dzięki dziesiątkom zmian w interfejsie Scratcha, czyni Scratcha lepszym niż kiedykolwiek. Nasza grupa programistów, artystów, pomysłodawców, beta testerów i menadżerów prasowych składa się w całości ze Scratcherów."
+  },
+  "home.features.title": {
+    "message": "Funkcje"
+  },
+  "home.features.short": {
+    "message": "Oto przykładowe funkcje które zawiera:"
+  },
+  "home.features.more": {
+    "message": "Zobacz Wszystkie 100+ Funkcji"
+  },
+  "home.download.title": {
+    "message": "Pobierz"
+  },
+  "home.download.short": {
+    "message": "Ciesz się ScratchTools w Twojej przeglądarce!"
+  },
+  "home.download.users": {
+    "message": "Użytkownicy"
+  },
+  "home.download.available": {
+    "message": "ScratchTools dostępne jest na Chrome, Firefox, oraz Microsoft Edge!"
+  },
+  "404.main.error": {
+    "message": "Nie mogliśmy znaleźć strony której szukałeś!"
+  },
+  "404.main.weird": {
+    "message": "To trochę dziwne..."
+  },
+  "404.main.link": {
+    "message": "Jeśli jakiś link Cię tu przekierował, to znaczy, że już nie działa."
+  },
+  "credits.meta.title": {
+    "message": "Twórcy | ScratchTools"
+  },
+  "credits.main.title": {
+    "message": "Twórcy"
+  },
+  "credits.main.short": {
+    "message": "Tutaj znajdują się wszyscy którzy pomogli przy rozwoju ScratchTools."
+  },
+  "features.meta.title": {
+    "message": "Funkcje | ScratchTools"
+  },
+  "features.main.title": {
+    "message": "Funkcje"
+  },
+  "features.main.short": {
+    "message": "ScratchTools zawiera 100+ unikalnych funkcji, oto one!"
+  },
+  "feedback.meta.title": {
+    "message": "Opinia | ScratchTools"
+  },
+  "feedback.main.title": {
+    "message": "Opinia"
+  },
+  "feedback.main.short": {
+    "message": "Masz uwagi dotyczące ScratchTools? Wypełnij poniższy formularz, abyśmy mogli się udoskonalać!"
+  },
+  "feedback.form.label": {
+    "message": "Wypełnij poniższy formularz, aby zostawić opinię"
+  },
+  "feedback.form.submit": { "message": "Prześlij Opinię" },
+  "goodbye.main.title": {
+    "message": "Żegnaj"
+  },
+  "goodbye.main.short": {
+    "message": "Będziemy tęsknić"
+  },
+  "goodbye.main.long": {
+    "message": "Rozumiemy, że masz swoje powody i przykro nam, że odchodzisz. Jeśli jest jakiś konkretny powód, dla którego odszedłeś, będziemy wdzięczni, jeśli przekażesz nam swoją opinię."
+  },
+  "goodbye.main.feedback": {
+    "message": "Podziel Się Opinią"
+  }
+}
