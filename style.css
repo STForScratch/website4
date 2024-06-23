@@ -516,6 +516,17 @@ footer .links a:hover {
   .nav .right {
     margin-right: 1rem;
   }
+
+  .banner {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: calc(calc(100% - 4rem) + 16px);
+  }
+
+  .features {
+    margin-left: 0px;
+    width: 100%;
+  }
 }
 
 .language-select {
