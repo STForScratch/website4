@@ -50,6 +50,15 @@
             div.appendChild(h3)
             div.appendChild(p)
             div.appendChild(a)
+
+            if (ftr.moreInfo) {
+              let moreInfoLink = document.createElement("a")
+              moreInfoLink.href = `https://docs.scratchtools.app/docs/features/${ftr.id}`
+              let button = document.createElement("button")
+              button.textContent = "Read More"
+              moreInfoLink.appendChild(button)
+              div.appendChild(moreInfoLink)
+            }
             document.querySelector(".features").appendChild(div)
         })
     </script>

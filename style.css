@@ -261,12 +261,32 @@ div.credit {
 .feature {
   width: calc(100% - calc(2rem + 3px));
   display: inline-block;
-  border: 1.5px solid rgb(187, 187, 187, .5);
+  border: 1.5px solid rgb(187, 187, 187, .65);
   border-radius: .25rem;
   padding: 1rem;
   margin-bottom: 1rem;
   text-align: left;
   overflow: hidden;
+}
+
+.feature button {
+  background-color: rgb(187, 187, 187, .65);
+  color: white;
+  position: relative;
+  width: calc(100% + 2rem);
+  border-radius: 0px;
+  left: -1rem;
+  top: 1rem !important;
+  padding: .75rem;
+  margin-top: -1rem;
+}
+
+.feature a[href^='https://docs.scratchtools.app'] {
+  opacity: 1;
+}
+
+.feature > button:hover {
+  bottom: -1rem !important;
 }
 
 .feature div {
