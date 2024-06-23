@@ -23,10 +23,6 @@ h1.title {
   top: -0.5rem;
 }
 
-.features.big {
-  margin-top: 3rem;
-}
-
 .more-features {
   padding: 0.5;
   border-radius: 1.25rem;
@@ -44,16 +40,6 @@ h1.title {
 .post {
   text-align: left;
   padding: 2rem;
-}
-
-.big.features > div.feature {
-  overflow-y: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.feature::-webkit-scrollbar {
-  display: none;
 }
 
 .top-logo {
@@ -254,7 +240,6 @@ button:hover {
   height: 10rem;
 }
 
-div.feature,
 div.credit {
   background-color: #f0f0f0 !important;
   padding: 1rem;
@@ -273,9 +258,52 @@ div.credit {
   height: 14rem;
 }
 
-div.feature p {
-  font-size: 0.9rem;
-  opacity: 0.5;
+.feature {
+  width: calc(100% - calc(2rem + 3px));
+  display: inline-block;
+  border: 1.5px solid rgb(187, 187, 187, .5);
+  border-radius: .25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  overflow: hidden;
+}
+
+.feature div {
+  position: relative;
+  left: -1rem;
+  top: -1rem;
+  width: calc(100% + 2rem);
+  border-radius: 0px !important;
+}
+
+.feature h3 {
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: .5rem;
+}
+
+.feature p {
+  margin: 0px;
+}
+
+.features {
+  width: 60%;
+  margin-left: 20%;
+  column-count: 3;
+  column-gap: 1rem;
+}
+
+@media (max-width: 1150px) {
+  .features {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 820px) {
+  .features {
+    column-count: 1;
+  }
 }
 
 .credit a {
@@ -297,21 +325,8 @@ h3 {
   text-align: center;
 }
 
-div.feature h2 {
-  font-size: 1.1rem;
-}
-
-.beta-colorful-design {
-  display: none;
-}
-
 .credits {
   margin-top: 2rem;
-}
-
-
-.new-features > div.feature p {
-  margin-top: -0.5rem;
 }
 
 .section-left,
@@ -352,6 +367,22 @@ footer {
   padding: 3rem;
 }
 
+.banner {
+  background-color: #ff9f00;
+  color: white;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: calc(100% + 16px);
+  position: relative;
+  left: -8px;
+  top: -2rem
+}
+
+.banner p {
+  margin-top: 0px;
+}
+
 footer .links {
   display: inline-block;
   text-align: left;
@@ -359,6 +390,15 @@ footer .links {
   margin-right: 3rem;
   position: relative;
   left: -3rem;
+}
+
+.feature a {
+  opacity: .6;
+  color: black;
+  text-decoration: none;
+  margin-top: .5rem;
+  display: block;
+  font-weight: 600;
 }
 
 footer .links > * {

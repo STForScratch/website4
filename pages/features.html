@@ -20,9 +20,9 @@
         </a>
       </div>
     </div>
-    <div class="title-stuff">
+    <div class="banner">
         <h1 class="title" data-locale="features.main.title">Features</h1>
-    <p data-locale="features.main.short">ScratchTools includes 100+ unique features, here they are!</p>
+    <p data-locale="features.main.short">ScratchTools includes 150+ unique features, here they are!</p>
     </div>
     <div class="features big">
 
@@ -37,13 +37,19 @@
             color.style.background = `url(https://raw.githubusercontent.com/STForScratch/data/main/images/${ftr.id}.png), linear-gradient(45deg, #ff9f00, #ffad42)`
             color.style.backgroundSize = "cover"
             color.style.backgroundPosition = "center center"
+            color.style.height = "10rem"
+            color.style.borderRadius = ".25rem"
             div.appendChild(color)
             var h3 = document.createElement("h3")
             h3.textContent = ftr.title
             var p = document.createElement("p")
             p.textContent = ftr.description
+            let a = document.createElement("a")
+            a.href = ftr.version === 2 ? `https://github.com/STForScratch/ScratchTools/tree/main/features/${ftr.id}` : `https://github.com/STForScratch/ScratchTools/blob/main/features/${ftr.id}.js`
+            a.textContent = ftr.id
             div.appendChild(h3)
             div.appendChild(p)
+            div.appendChild(a)
             document.querySelector(".features").appendChild(div)
         })
     </script>

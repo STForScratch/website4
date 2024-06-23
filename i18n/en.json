@@ -24,7 +24,7 @@
     "message": "Here are some of the features that it includes."
   },
   "home.features.more": {
-    "message": "View All 100+ Features"
+    "message": "View All 150+ Features"
   },
   "home.download.title": {
     "message": "Download"
@@ -63,7 +63,7 @@
     "message": "Features"
   },
   "features.main.short": {
-    "message": "ScratchTools includes 100+ unique features, here they are!"
+    "message": "ScratchTools includes 150+ unique features, here they are!"
   },
   "feedback.meta.title": {
     "message": "Feedback | ScratchTools"
