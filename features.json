@@ -10,7 +10,8 @@
     "title": "View Sprite Layers",
     "description": "Allows you to hover over the show/hide toggle in the sprite properties panel of the editor to view the sprite layers.",
     "id": "sprite-layers",
-    "version": 2
+    "version": 2,
+    "moreInfo": true
   },
   {
     "title": "Hide Project Tags",
