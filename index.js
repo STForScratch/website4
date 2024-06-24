@@ -96,6 +96,10 @@ app.get("/", async function (req, res) {
   });
 });
 
+app.get("/x/", function(req, res) {
+  res.redirect("https://docs.scratchtools.app/docs/x")
+})
+
 app.get("/flag/:country/", function(req, res) {
   res.sendFile(path.join(__dirname, `/i18n/flags/${req.params.country}.svg`))
 })
