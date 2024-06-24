@@ -42,7 +42,7 @@ async function getUsercount() {
   return (
     await (
       await fetch(
-        "https://raw.githubusercontent.com/STForScratch/website3/main/data/usercount.json"
+        "https://raw.githubusercontent.com/STForScratch/website3/main/data/usercount.json?timestamp=" + Date.now().toString()
       )
     ).json()
   ).count;

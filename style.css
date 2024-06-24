@@ -514,7 +514,7 @@ footer .links a:hover {
   }
 
   .nav .right {
-    margin-right: 1rem;
+    margin-right: 0px;
   }
 
   .banner {
@@ -526,6 +526,10 @@ footer .links a:hover {
   .features {
     margin-left: 0px;
     width: 100%;
+  }
+
+  .feature {
+    width: calc(100% - calc(4rem + 3px));
   }
 }
 
