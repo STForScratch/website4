@@ -95,6 +95,7 @@ textarea {
   background-repeat: no-repeat;
   background-position: center center;
   padding: 2rem;
+  background-size: 200px;
 }
 
 body.top-part {
